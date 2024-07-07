@@ -22,7 +22,7 @@
           },
           {
             "src": "/static/images/(.*)",
-            "dest": "static/images/$1"
+            "dest": "static/images/"
           },
           {
             "src": "/images/(.*)",
