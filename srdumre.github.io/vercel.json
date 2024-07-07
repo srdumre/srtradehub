@@ -1,0 +1,40 @@
+{
+    "builds": [{
+        "src": "mywebsite/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },{
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": { "distDir":"static" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "mywebsite/wsgi.py"
+        },
+        {
+            "handle": "filesystem"
+          },
+          {
+            "src": "/static/css/(.*)",
+            "dest": "static/css/$1"
+          },
+          {
+            "src": "/static/images/(.*)",
+            "dest": "static/images/$1"
+          },
+          {
+            "src": "/images/(.*)",
+            "dest": "static/images/$1"
+          },
+          {
+            "src": "/static/css/main.css",
+            "dest": "static/css/main.css"
+          },
+          {
+            "src": "/static/images/srd.jpeg",
+            "dest": "static/images/srd.jpeg"
+          }
+    ]
+}
