@@ -35,6 +35,46 @@
           {
             "src": "/static/images/srd.jpeg",
             "dest": "static/images/srd.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_1.jpeg",
+            "dest": "static/images/furniture_1.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_2.jpeg",
+            "dest": "static/images/furniture_2.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_3.jpeg",
+            "dest": "static/images/furniture_3.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_4.jpeg",
+            "dest": "static/images/furniture_4.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_5.jpeg",
+            "dest": "static/images/furniture_5.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_6.jpeg",
+            "dest": "static/images/furniture_6.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_7.jpeg",
+            "dest": "static/images/furniture_7.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_8.jpeg",
+            "dest": "static/images/furniture_8.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_9.jpeg",
+            "dest": "static/images/furniture_9.jpeg"
+          },
+          {
+            "src": "/static/images/furniture_10.jpeg",
+            "dest": "static/images/furniture_10.jpeg"
           }
     ]
 }
