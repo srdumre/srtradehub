@@ -1,83 +1,27 @@
 {
+  "version": 2,
   "builds": [
-      {
-          "src": "mywebsite/wsgi.py",
-          "use": "@vercel/python",
-          "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
-      },
-      {
-          "src": "build_files.sh",
-          "use": "@vercel/static-build",
-          "config": { "distDir": "static" }
+    {
+      "src": "mywebsite/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
       }
+    }
   ],
   "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "mywebsite/wsgi.py"
-      },
-      {
-          "handle": "filesystem"
-      },
-      {
-          "src": "/static/css/(.*)",
-          "dest": "static/css/$1"
-      },
-      {
-          "src": "/static/images/(.*)",
-          "dest": "static/images/$1"
-      },
-      {
-          "src": "/images/(.*)",
-          "dest": "static/images/$1"
-      },
-      {
-          "src": "/static/css/main.css",
-          "dest": "static/css/main.css"
-      },
-      {
-          "src": "/static/images/logo.png",
-          "dest": "static/images/logo.png"
-      },
-      {
-          "src": "/static/images/furniture_1.jpeg",
-          "dest": "static/images/furniture_1.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_2.jpeg",
-          "dest": "static/images/furniture_2.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_3.jpeg",
-          "dest": "static/images/furniture_3.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_4.jpeg",
-          "dest": "static/images/furniture_4.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_5.jpeg",
-          "dest": "static/images/furniture_5.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_6.jpeg",
-          "dest": "static/images/furniture_6.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_7.jpeg",
-          "dest": "static/images/furniture_7.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_8.jpeg",
-          "dest": "static/images/furniture_8.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_9.jpeg",
-          "dest": "static/images/furniture_9.jpeg"
-      },
-      {
-          "src": "/static/images/furniture_10.jpeg",
-          "dest": "static/images/furniture_10.jpeg"
-      }
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "mywebsite/wsgi.py"
+    }
   ]
 }
